@@ -11,8 +11,6 @@
 /dev/block/platform/msm_sdcc.1/by-name/Cache          /cache              f2fs     rw,nosuid,nodev,noatime,inline_xattr,flush_merge,nobarrier                 wait,check,formattable
 /dev/block/platform/msm_sdcc.1/by-name/Cache          /cache              ext4     rw,nosuid,nodev,noatime,noauto_da_alloc,barrier=1,errors=panic             wait,check,formattable
 
-/devices/platform/msm_sdcc.1/mmc_host/mmc*/mmcblk0    auto                ext4     rw,nosuid,nodev,noatime,noauto_da_alloc,barrier=1,nodelalloc,uid=1023,gid=1023,dmask=0007,fmask=0007,ignore_case=1   voldmanaged=sdcard0:15,noemulatedsd,nonremovable
-
 /devices/platform/msm_sdcc.3/mmc_host/mmc*            auto                auto     defaults                                                                   voldmanaged=sdcard1:auto,encryptable=userdata
 /devices/platform/msm_hsusb_host/usb*                 auto                auto     defaults                                                                   voldmanaged=usb:auto
 /dev/block/zram0                                      none                swap     defaults                                                                   zramsize=419430400,zramstreams=2

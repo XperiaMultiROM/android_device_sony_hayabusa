@@ -3,9 +3,11 @@
 /recovery      emmc    /dev/block/platform/msm_sdcc.1/by-name/FOTAKernel                      flags=backup=1;canbewiped;wipeingui
 /system        ext4    /dev/block/platform/msm_sdcc.1/by-name/System                          flags=backup=1;canbewiped;wipeingui
 /cache         ext4    /dev/block/platform/msm_sdcc.1/by-name/Cache                           flags=backup=1;canbewiped;wipeingui;wipeduringfactoryreset
-/data          ext4    /dev/block/platform/msm_sdcc.1/by-name/Userdata                        flags=backup=1;canbewiped;wipeingui;wipeduringfactoryreset;encryptable=footer;length=-16384
+/data          ext4    /dev/block/platform/msm_sdcc.1/by-name/Userdata                        flags=backup=1;canbewiped;wipeingui;wipeduringfactoryreset;settingsstorage;encryptable=footer;length=-16384
 /ta            emmc    /dev/block/platform/msm_sdcc.1/by-name/TA                              flags=backup=1;display="TrimArea"
-/sdcard        ext4    /dev/block/platform/msm_sdcc.1/by-name/SDCard                          flags=backup=0;wipeingui;storage;settingsstorage
+
+# Legacy SDCard storage
+/sdcard_legacy ext4    /dev/block/platform/msm_sdcc.1/by-name/SDCard                          flags=backup=0;display="Legacy SDCard";wipeingui;removable;storage
 
 # Removable storage
 /external_sd   vfat    /dev/block/mmcblk1p1                               /dev/block/mmcblk1  flags=backup=0;wipeingui;storage;removable;settingsstorage;encryptable=userdata
