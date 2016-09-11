@@ -5,6 +5,7 @@
 /cache         ext4    /dev/block/platform/msm_sdcc.1/by-name/Cache                           flags=backup=1;canbewiped;wipeingui;wipeduringfactoryreset
 /data          ext4    /dev/block/platform/msm_sdcc.1/by-name/Userdata                        flags=backup=1;canbewiped;wipeingui;wipeduringfactoryreset;settingsstorage;encryptable=footer;length=-16384
 /ta            emmc    /dev/block/platform/msm_sdcc.1/by-name/TA                              flags=backup=1;display="TrimArea"
+/misc          emmc    /dev/block/platform/msm_sdcc.1/by-name/apps_log
 
 # Legacy SDCard storage
 /sdcard_legacy ext4    /dev/block/platform/msm_sdcc.1/by-name/SDCard                          flags=backup=0;display="Legacy SDCard";wipeingui;removable;storage
