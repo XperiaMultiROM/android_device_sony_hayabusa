@@ -101,7 +101,7 @@ TW_THEME := portrait_hdpi
 # MultiROM configuration
 MR_INPUT_TYPE := type_b
 MR_INIT_DEVICES := $(DEVICE_PATH)/multirom/mr_init_devices.c
-MR_ALLOW_NKK71_NOKEXEC_WORKAROUND := true
+MR_NO_KEXEC := enabled
 MR_DPI := hdpi
 MR_DPI_FONT := 216
 MR_FSTAB := $(DEVICE_PATH)/recovery.fstab
