@@ -110,6 +110,14 @@ MR_UNIFIED_TABS := true
 MR_USE_MROM_FSTAB := true
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
 
+# MultiROM versioning
+ifeq ($(MR_REC_VERSION),)
+MR_REC_VERSION := $(shell date -u +%Y%m%d)
+endif
+
+# MultiROM version tag
+BOARD_KERNEL_NAME := mrom$(MR_REC_VERSION)
+
 # MultiROM build
 DEVICE_RESOLUTION := 720x1280
 TARGET_RECOVERY_IS_MULTIROM := true
