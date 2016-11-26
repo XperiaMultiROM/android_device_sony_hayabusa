@@ -6,6 +6,12 @@ DEVICE_LOGORLE := $(DEVICE_BOOTDIR)/logo.rle
 DEVICE_RPMBIN := device/sony/hayabusa/prebuilts/RPM.bin
 MKELF := $(DEVICE_BOOTDIR)/mkelf.py
 
+MKELF_ARGS :=
+BOARD_KERNEL_NAME := $(strip $(BOARD_KERNEL_NAME))
+ifdef BOARD_KERNEL_NAME
+  MKELF_ARGS += -n $(BOARD_KERNEL_NAME)
+endif
+
 recovery_uncompressed_twrp_ramdisk := $(PRODUCT_OUT)/ramdisk-twrp.cpio
 $(recovery_uncompressed_twrp_ramdisk): $(MKBOOTFS) \
 		$(INTERNAL_RECOVERYIMAGE_FILES) \
@@ -28,5 +34,5 @@ $(INSTALLED_RECOVERYIMAGE_TARGET): $(MINIGZIP) \
 	$(hide) rm -f $(PRODUCT_OUT)/ramdisk-recovery.cpio
 	$(hide) mv $(recovery_uncompressed_twrp_ramdisk) $(PRODUCT_OUT)/ramdisk-recovery.cpio
 	$(hide) $(MINIGZIP) < $(PRODUCT_OUT)/ramdisk-recovery.cpio > $(PRODUCT_OUT)/ramdisk-recovery.img
-	$(hide) python $(MKELF) -o $@ $(PRODUCT_OUT)/kernel@0x80208000 $(PRODUCT_OUT)/ramdisk-recovery.img@0x81900000,ramdisk $(DEVICE_RPMBIN)@0x00020000,rpm $(DEVICE_CMDLINE)@cmdline
+	$(hide) python $(MKELF) $(MKELF_ARGS) -o $@ $(PRODUCT_OUT)/kernel@0x80208000 $(PRODUCT_OUT)/ramdisk-recovery.img@0x81900000,ramdisk $(DEVICE_RPMBIN)@0x00020000,rpm $(DEVICE_CMDLINE)@cmdline
 	$(call pretty,"Made recovery image: $@")
