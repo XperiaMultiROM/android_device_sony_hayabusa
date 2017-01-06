@@ -1,3 +1,6 @@
+Copyright 2016 - The CyanogenMod Project  
+Copyright 2017 - The LineageOS Project  
+
 Sony Xperia TX
 ==============
 
@@ -5,7 +8,7 @@ The Sony Xperia TX (codenamed _"Hayabusa"_) is a flagship smartphone from Sony M
 
 It was announced on 29 August 2012.
 
-Hayabusa was supported in CyanogenMod 10.1 and now by CyanogenMod 13.0
+Hayabusa was supported in CyanogenMod 10.1, 13.0, 14.1 and now by LineageOS 14.1
 
 Basic   | Spec Sheet
 -------:|:-------------------------
@@ -19,6 +22,6 @@ Battery | 1750 mAh
 Display | 4.55" 1280 x 720 px
 Camera  | 13MPx, LED Flash
 
-![Sony Xperia TX](http://wiki.cyanogenmod.org/images/7/78/Hayabusa.png "Sony Xperia TX in black")
+![Sony Xperia TX](http://cdn2.gsmarena.com/vv/pics/sony/sony-xperia-tx.jpg "Sony Xperia TX in black")
 
-This branch is for building MultiROM for the Xperia TX (Hayabusa).
+This branch is for building MultiROM only.

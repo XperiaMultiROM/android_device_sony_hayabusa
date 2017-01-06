@@ -1,4 +1,7 @@
+#
 # Copyright (C) 2011 The Android Open Source Project
+#           (C) 2011-2016 The CyanogenMod Project
+#           (C) 2017 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -20,7 +23,7 @@ $(call inherit-product, device/sony/hayabusa/device.mk)
 TARGET_SCREEN_HEIGHT := 1280
 TARGET_SCREEN_WIDTH := 720
 
-# Device identification
+# Device identifications
 PRODUCT_DEVICE := hayabusa
 PRODUCT_NAME := omni_hayabusa
 PRODUCT_RELEASE_NAME := hayabusa
